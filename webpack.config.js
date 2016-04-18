@@ -7,9 +7,12 @@ module.exports = {
     filename: 'app.js'
   },
   module: {
-    loader: [{
+    loaders: [{
       test: /\.jsx?$/,
       loader: 'babel'
     }]
   }
 };
+
+//  TYPE THIS IN COMMAND LINE TO RESTART SERVER
+//  node_modules/.bin/webpack-dev-server
