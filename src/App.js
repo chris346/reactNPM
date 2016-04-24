@@ -11,7 +11,7 @@ class App extends React.Component {
     return (
       <div>
         <h1>Contacts List</h1>
-        <ContactsList contact={this.props.contacts}/>
+        <ContactsList contacts={this.props.contacts}/>
       </div>
     )
   }
