@@ -2,15 +2,19 @@ import React from 'react';
 import ContactsList from './ContactsList';
 
 let contacts = [{
+  id: 1,
   name: 'Chris',
   phone: '555 555 5555'
 }, {
+  id: 2,
   name: 'Blair',
   phone: '888 555 5555'
 }, {
+  id: 3,
   name: 'Denney',
   phone: '111 555 5555'
 }, {
+  id: 4,
   name: 'Jen',
   phone: '777 555 5555'
 }]

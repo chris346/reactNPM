@@ -2,13 +2,35 @@ import React from 'react';
 import Contact from './Contact';
 
 class ContactsList extends React.Component {
+
+  constructor() {
+    super();
+    this.state = {
+      search: ''
+    };
+  }
+
+  updateSearch(event) {
+    this.setState({search: event.target.value.substr(0,20)});
+  }
+
   render() {
+    let filteredContacts = this.props.contacts.filter(
+      (contact) => {
+        return contact.name.toLowerCase().indexOf(this.state.search) !==  -1;
+      }
+    );
     return (
-      <ul>
-        {this.props.contacts.map((contact)=> {
-          return <Contact contact={contact}/>
-        })}
-      </ul>
+      <div>
+        <input type="type"
+          value={this.state.search}
+          onChange={this.updateSearch.bind(this)}/>
+        <ul>
+          {filteredContacts.map((contact)=> {
+            return <Contact contact={contact} key={contact.id}/>
+          })}
+        </ul>
+      </div>
     )
   }
 }
